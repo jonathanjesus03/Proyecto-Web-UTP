@@ -1,0 +1,452 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+main{
+  display: flex;
+  width: 100%;
+}
+
+.main_content{
+  position: relative;
+  background: #1d1d1d;
+  width: 100%;
+  padding: 1rem;
+}
+
+.header-wrapper img{
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.header-wrapper{
+  display: flex;
+  width: 100%;
+  justify-content: space-between ;
+  align-items: center;
+  flex-wrap: wrap;
+  background: #1d1d1d;
+  border-radius: 10px;
+  padding: 10px 2rem;
+  margin-bottom: 1rem;
+}
+
+/*Boton Switch Dark Mode From https://www.auladiv.com/como_se_hace/toggle-switch-1.html*/
+.header_tittle{
+  color:#fff;
+  width: 70%;
+}
+.header_tittle h1 {
+  font-size: 3rem;
+}
+
+.toggle{
+  position: absolute;
+  width: 0;
+  height: 0;
+  & + .switch{
+      position: absolute;
+      right: 83px;
+      display: block;
+      background: lightgray;
+      width: 90px;
+      height: 30px;
+      cursor: pointer;
+      border-radius: 30px;
+      transition: 0.5s;
+  }
+  &:checked + .switch{
+      background: rgb(180, 2, 2);
+  }
+  & + .switch:before{
+      content:"";
+      position: absolute;
+      width: 28px;
+      height: 28px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #320c0c;
+      border-radius: 50%;
+      margin: 0px 2px;
+      left: 0%;
+      transition: 1s;
+  }
+  &:checked + .switch:before{
+      left: 100%;
+      transform: translate(calc(-100% - 2px), -50%);
+  }
+}
+
+#span_mode{
+  position: absolute;
+  right: 50px;
+  top: 30px;
+  font-weight: bold;
+  color: white;
+}
+
+/*
+#label_switch{
+}
+*/
+
+.user_info{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.box_search{
+  background: rgb(237, 237, 237);
+  border-radius: 15px;
+  display: flex;
+  color: rgb(248, 117, 117);
+  align-items: center;
+  padding: 4px 12px;
+  gap: 5px;
+}
+
+.box_search input {
+  background: transparent;
+  padding: 10px;  
+}
+
+.box_search i {
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.box_search i:hover {
+  transform: scale(1.4);
+}
+
+.course_container{
+  background: #1d1d1d;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  position: relative;
+}
+
+.course_wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  gap: 1rem;
+}
+
+.main_title{
+  color: #fff;
+  padding-bottom: 10px;
+  font-size: 15px;
+}
+
+.course_sections{
+  border-radius: 10px;
+  padding: 1.2rem;
+  width: 290px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.5s ease-in-out;
+}
+
+.course_sections:hover{
+  transform: translateY(-5px);
+}
+
+.course_header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.section{
+  display: flex;
+  flex-direction: column;
+}
+
+.title{
+  font-size: 12px;
+  font-weight: 200;  
+}
+
+.code_section{
+  font-size: 24px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
+}
+
+.icon{
+  color: #fff;
+  padding: 1rem;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  background: rgb(255, 36, 36);
+}
+
+.course_detail{
+  font-size: 18px;
+  color: #1d1d1d;
+  letter-spacing: 1px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/*Tabular Section*/
+.tabular_wrapper{
+  margin-top: 1rem;
+  background: #1d1d1d;
+  border-radius: 10px;
+  padding: 2rem 2rem 0rem 2rem;
+}
+
+.table_container{
+  width: 100%;
+  animation: 1.5s;
+  animation-name: slideinTable;
+}
+#h3WelcomeDay {
+  font-size: 1.5rem;
+}
+.tabular_wrapper .main_title {
+  font-size: 1.5rem;
+}
+
+table{
+  width: 70%;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+thead{
+  background: rgba(255, 50, 50, 255);
+  color: #fff;
+}
+
+th{
+  padding: 15px;
+  text-align: left;
+}
+
+tbody{
+  background: #f2f2f2;
+}
+
+td{
+  padding: 15px;
+  font-size: 14px;
+  color: #333;
+}
+
+tr:nth-child(even){
+  background-color: #fff;
+}
+
+tfoot{
+  background: rgb(255, 100, 100);
+  font-weight: bold;
+  color: #fff;
+}
+
+tfoot td{
+  padding: 15px;
+  color: #fff;
+}
+
+.table_container button{
+  color: green;
+  background: none;
+  cursor: pointer;
+}
+
+/*Color CSS*/
+.light-red{
+  background: rgb(251, 233, 233);  
+}
+.light-purple{
+  background: rgb(254, 226, 254);  
+}
+.light-green{
+  background: rgb(235, 254, 235);  
+}
+.light-blue{
+  background: rgb(236, 236, 254);  
+}
+.dark-red{
+  background: red;  
+}
+.dark-purple{
+  background: purple;  
+}
+.dark-green{
+  background: green;  
+}
+.dark-blue{
+  background: blue;  
+}
+
+/*Navs CSS*/
+nav {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  gap: 0.5rem;
+  border-bottom: solid 1px #aaa;
+  background-color: #eee;
+  z-index: 200;
+}
+
+nav a {
+  display: inline-block;
+  min-width: 9rem;
+  padding: 0.5rem;
+  border-radius: 0.2rem;
+  border: solid 1px #aaa;
+  text-align: center;
+  text-decoration: none;
+  color: #555;
+
+}
+
+nav a[aria-current='page'] {
+  color: #000;
+  background-color: #d4d4d4;
+}
+
+/*Animations*/
+
+.header_tittle h1{
+  animation-duration: 1.5s;
+  animation-name: slidein;
+}
+
+.header_tittle span{
+  animation-duration: 1.5s;
+  animation-name: slideinPrimary;
+}
+
+.user_info, .main_title, .course_wrapper{
+  animation-duration: 1.5s;
+  animation-name: slideinUser;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 350%;
+    color: white
+  }
+  
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+
+@keyframes slideinPrimary {
+  from {
+    margin-left: 100%;
+    width: 300%;
+    color: white;
+  }
+  
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+  
+}
+
+@keyframes slideinUser {
+  from {
+    opacity: 0;
+    margin-right: -37px;
+  }
+  
+  to {
+  }
+}
+
+@keyframes slideinTable {
+  from {
+    opacity: 0;
+  }
+  
+  to {
+  }
+}
+
+@media screen and (max-width: 850px){
+  .header-wrapper{
+    margin-top: 50px;
+  }
+  .header-wrapper{
+    margin-top: 50px;
+  }
+  
+  .table_container{
+    overflow-x: scroll;
+    scrollbar-width: thin;
+  }
+
+  .table_container table{
+    border-collapse: collapse; 
+    
+  }
+
+.table_container table th, .table_container table td {
+  border: 1px solid #ddd; /* Bordes de las celdas */
+  padding: 8px;
+  text-align: left;
+}
+
+}
+
+
+@media screen and (max-width: 1780px){
+  .toggle{
+    & + .switch{
+        position: absolute;
+        right: 83px;
+        top: 20px;
+        display: block;
+        background: lightgray;
+        width: 90px;
+        height: 30px;
+        cursor: pointer;
+        border-radius: 30px;
+        transition: 0.5s;
+    }
+  }
+  
+  #span_mode{
+    position: absolute;
+    right: 50px;
+    top: -3px;
+    font-weight: bold;
+    color: white;
+  }
+  
+
+}
