@@ -1,0 +1,66 @@
+{
+    "users" : [
+        {
+        "name": "Jonathan Jesus",
+        "surname": "Jacinto",
+        "dob": "2000-01-01",
+        "gender": "Male",
+        "nationality": "Peruvian",
+        "phone_number": "916390651",
+        "major": "Engineering",
+        "enrollment_date": "19/10/2019",
+        "modalidad": "Morning",
+        "email": "jesusjonathan@gmail.com", 
+        "cycle": "XII",
+        "password": "jonathan1234"
+        },
+
+        {
+            "name": "Priscilla",
+            "surname": "Caroline",
+            "dob": "2004-06-22",
+            "gender": "Female",
+            "nationality": "Peruvian",
+            "phone_number": "923848238",
+            "major": "Engineering",
+            "enrollment_date": "10/05/2018",
+            "modalidad": "Morning",
+            "email": "PriscillaArboleda@gmail.com", 
+            "cycle": "XII",
+            "password": "priscillacaroline"
+        },
+
+        {
+            "name": "Jans Leonel",
+            "surname": "Morales",
+            "dob": "2003-03-30",
+            "gender": "Male",
+            "nationality": "Peruvian",
+            "phone_number": "94238482",
+            "major": "Engineering",
+            "enrollment_date": "10/05/2020",
+            "modalidad": "Morning",
+            "email": "JansMorales@gmail.com", 
+            "cycle": "XII",
+            "password": "jansleonel"
+
+        },
+
+        {
+            "name": "Leon",
+            "surname": "Yatzeti",
+            "dob": "2003-15-03",
+            "gender": "Male",
+            "nationality": "Peruvian",
+            "phone_number": "923481245",
+            "major": "Engineering",
+            "enrollment_date": "09/01/2019",
+            "modalidad": "Morning",
+            "email": "Yatzeti123@gmail.com", 
+            "cycle": "XII",
+            "password": "leonyatzeti"
+
+        }
+    ]
+    
+}
