@@ -4,7 +4,24 @@
 Este proyecto tiene como propósito demostrar mis habilidades en el desarrollo web y servir como una presentación en mi universidad.  
 
 📂 **Estructura del Proyecto**  
-El código fuente se encuentra dentro de la carpeta **`Pagina UTP/`**, donde se organizan los archivos del proyecto.  
+- `assets/` - Recursos estáticos (imágenes, CSS, JS).
+- `pages/` - Páginas adicionales del sitio.
+- `uploads/` - Archivos subidos (como fotos).
+- `app.js` - Servidor principal con Node.js.
+- `index.html` - Página principal del frontend.
+---
+
+## 📸 Vista Previa
+Aquí tienes una idea de cómo luce el proyecto:
+
+### Página Principal
+![Vista previa de la página principal](assets/screenshots/homepage-preview.png)
+
+### Sección de Inicio de Sesión
+![Vista previa de la sección de login](assets/screenshots/login-preview.png)
+
+### Perfil de Usuario
+![Vista previa de la sección de login](assets/screenshots/profile-preview.png)
 
 ---
 
@@ -22,7 +39,7 @@ sudo apt update && sudo apt install nodejs npm -y
 
 ```bash
 git clone https://github.com/TuUsuario/Taller-Web-UTP.git
-cd Taller-Web-UTP/Pagina UTP
+cd Taller-Web-UTP
 ```
 
 ## 📦 Instalar dependencias del proyecto:
@@ -42,5 +59,5 @@ npm start
 
 ## 🌍 Abrir en el navegador:
 ```
-http://localhost:3000
+http://localhost:8080
 ```
