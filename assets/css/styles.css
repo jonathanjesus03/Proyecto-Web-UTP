@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', system-ui, sans-serif;
+  font-family: "Segoe UI", system-ui, sans-serif;
 }
 
 body {
@@ -39,13 +39,13 @@ body {
 }
 
 .left-side::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: url('/api/placeholder/800/600') center/cover;
+  background: url("/api/placeholder/800/600") center/cover;
   opacity: 0.1;
   z-index: -1;
 }
@@ -83,7 +83,7 @@ body {
 }
 
 .feature-icon {
-  background: #D01A49;
+  background: #d01a49;
   padding: 12px;
   border-radius: 12px;
 }
@@ -106,20 +106,23 @@ body {
   align-items: center;
 }
 
-.login-form, .register-form{
+.login-form,
+.register-form {
   width: 100%;
   max-width: 400px;
   margin: 0 auto;
   transition: all 1s;
 }
 
-.login-form h2 , .register-form h2{
+.login-form h2,
+.register-form h2 {
   font-size: 32px;
   color: #1d1d1d;
   margin-bottom: 8px;
 }
 
-.login-form p, .register-form p{
+.login-form p,
+.register-form p {
   color: #666;
   margin-bottom: 32px;
 }
@@ -179,11 +182,11 @@ body {
 }
 
 .remember-me input[type="checkbox"] {
-  accent-color: #FF0000;
+  accent-color: #ff0000;
 }
 
 .forgot-password {
-  color: #FF0000;
+  color: #ff0000;
   font-size: 14px;
   text-decoration: none;
   transition: color 0.3s;
@@ -193,10 +196,11 @@ body {
   color: #cc0000;
 }
 
-.login-button, .register-button{
+.login-button,
+.register-button {
   width: 100%;
   padding: 12px;
-  background: #FF0000;
+  background: #ff0000;
   color: white;
   border: none;
   border-radius: 12px;
@@ -206,7 +210,8 @@ body {
   transition: all 0.3s;
 }
 
-.login-button:hover, .register-button:hover{
+.login-button:hover,
+.register-button:hover {
   background: #cc0000;
   transform: translateY(-1px);
 }
@@ -219,7 +224,7 @@ body {
 }
 
 .register-link a {
-  color: #FF0000;
+  color: #ff0000;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s;
@@ -229,181 +234,30 @@ body {
   color: #cc0000;
 }
 
-.login-form{
+.login-form {
   opacity: 1;
   display: block;
 }
 
-.register-form{
+.register-form {
   display: none;
 }
 
 @media (max-width: 968px) {
   .container {
-      flex-direction: column;
+    flex-direction: column;
   }
 
   .left-side {
-      padding: 32px;
-      min-height: auto;
+    padding: 32px;
+    min-height: auto;
   }
 
   .right-side {
-      padding: 32px;
+    padding: 32px;
   }
 
   .hero-content h1 {
-      font-size: 36px;
+    font-size: 36px;
   }
 }
-
-/* SIDEBAR */
-@media screen and (max-width: 850px){
-  .sideBars{
-    height: 70px;
-    width: 100%;
-    background-color: rgb(255, 100, 100);
-  }
-}
-
-.sideBar{
-  position: sticky;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 120px;
-  height: 100vh;
-  padding: 0 1.3rem;
-  color: #fff;
-  transition: all 0.5s linear;
-  background: rgb(255, 94, 94);
-}
-
-.sideBar:hover{
-  width: 240px;
-}
-
-.logo{
-  height: 80px;
-  padding: 16px;
-}
-
-.menu{
-  height: 88%;
-  position: relative;
-  list-style: none;
-  padding: 0;
-}
-
-.menu li{
-  padding: 1rem;
-  margin: 8px 0;
-  border-radius: 8px;
-  transition: all 0.5ms ease-in-out;
-  white-space: nowrap;
-}
-.menu li:last-child { /* hace referencia al último li - en tu caso el logout */
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-}
-
-.menu li:hover{
-  background: #e0e0e058;
-}
-.active{
-  background: hsla(0, 100%, 81%, 0.349);
-}
-
-.menu a {
-  color: #fff;
-  font-size: 14px;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-}
-
-.menu a span{
-  overflow: hidden
-}
-
-.menu i{
-  font-size: 1.2rem;
-}
-
-  /* SIDEBAR RESPONSIVE */
-  .sideBar2{
-    display: none;
-  }
-
-  .container_logo_sidebar2{
-    position:absolute;
-    width: 100%;
-    background-color: rgba(255, 60, 60, 255);
-    font-size: 20px;
-    z-index: 100;
-  }
-
-  .logo_sidebar2{
-    padding: 20px 20px;
-    width: 100%;
-    text-align: right;
-  }
-
-  /* MEDIA QUERIES */
-  @media screen and (max-width: 850px){
-    .sideBar{
-      display: none;
-    }
-
-    .sideBar2{
-        display: block;
-        position: absolute ;
-        width: 100%;
-        height: 40px;  
-      }
-
-    .elements_sidebar2 li{
-      width: 100%;
-      padding: 10px;
-    }
-
-    .elements_sidebar2 li i{
-      width: 40px;
-      text-align: left;
-      margin-left: 50px;
-      margin-right: 6px;
-      box-sizing: border-box;
-      color: #f2f2f2;
-    }
-
-    .elements_sidebar2 li a{
-      color: #f2f2f2;
-      text-decoration: none;
-    }
-    
-    .elements_sidebar2{
-      top: -400px;
-      position: relative;
-      height: 400px;
-      transition: all 1s;
-      background-color: rgb(255, 100, 100);
-      margin-left: -40px;   
-      z-index: 1;
-      padding-top: 30px;
-    }
-
-    .sideBar2:hover> .elements_sidebar2{
-      top: 60px;
-    }
-
-    .sideBar2 li:hover{
-      background: #e0e0e058;
-    }
-    .active{
-      background: hsla(0, 100%, 81%, 0.349);
-    }
-  }
-/* END - SIDEBAR */

@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
-*{
+* {
   margin: 0;
   padding: 0;
   outline: none;
@@ -11,26 +11,76 @@
   font-family: "Poppins", sans-serif;
 }
 
-main{
+main {
   display: flex;
 }
 
+/*Boton Switch Dark Mode From https://www.auladiv.com/como_se_hace/toggle-switch-1.html*/
+.toggle {
+  position: absolute;
+  width: 0;
+  height: 0;
+  & + .switch {
+    position: absolute;
+    right: 50px;
+    top: 30px;
+    display: block;
+    background: lightgray;
+    width: 90px;
+    height: 30px;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: 0.5s;
+  }
+  &:checked + .switch {
+    background: rgb(180, 2, 2);
+  }
+  & + .switch:before {
+    content: "";
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #320c0c;
+    border-radius: 50%;
+    margin: 0px 2px;
+    left: 0%;
+    transition: 1s;
+  }
+  &:checked + .switch:before {
+    left: 100%;
+    transform: translate(calc(-100% - 2px), -50%);
+  }
+}
+
+#span_mode {
+  position: absolute;
+  right: 148px;
+  font-weight: bold;
+}
+/*
+#label_switch{
+}
+*/
 
 /*Editing Forms*/
-main{
+main {
   position: relative;
   background: #ebe9e9;
   width: 100%;
 }
 
-.main_content{
+.main_content {
   position: relative;
+  display: flex;
+  flex-direction: column;
   background: #ebe9e9;
   width: 100%;
   padding: 1rem;
 }
 
-.header_titles{
+.header_titles {
   position: relative;
   display: flex;
   width: 100%;
@@ -38,51 +88,55 @@ main{
   border-radius: 10px;
   padding: 10px 2rem;
   margin: 1rem;
-  color:rgb(255, 48, 48);
+  color: rgb(255, 48, 48);
 }
 
-.header_titles span{
+.header_titles span {
+  z-index: 20;
   position: absolute;
   left: 3%;
   animation: slideAndWrite 1s ease-in-out forwards;
   white-space: nowrap;
 }
 
-.header_titles h1{
+.header_titles h1 {
   font-size: 45px;
   margin: 10px auto auto 30%;
   animation: slidein 1s ease-in-out forwards;
+  z-index: 20;
 }
-.header_titles i{
+.header_titles i {
   font-size: 50px;
   margin-left: 10px;
+  background: #fff;
+  border-radius: 100%;
 }
 
-.header_titles img{
+.header_titles img {
   position: absolute;
-  right: 45px;
+  right: 15px;
   height: 80px;
-  top: 6%;
-
+  top: 8%;
 }
 
-.container_student{
+.container_student {
   display: flex;
   flex-direction: column;
-  justify-content: space-between ;
+  justify-content: space-between;
   align-items: center;
   background: #fff;
   border-radius: 10px;
   padding: 10px 2rem;
   margin: 1rem;
   width: 100%;
+  position: relative;
 }
 
 label {
   display: block;
   margin-top: 10px;
 }
-.form-field input{
+.form-field input {
   background-color: #f0f0f0;
   margin-top: 20px;
   padding: 10px;
@@ -94,19 +148,18 @@ button {
   margin-top: 15px;
 }
 
-
-.container_photo_profile{
+.container_photo_profile {
   justify-items: center;
 }
 
-.container_photo_profile img{
-  margin: 30px 0px;
+.container_photo_profile img {
+  margin: 30px auto;
   border-radius: 50%;
-  max-width: 580px;
-  min-height: 480px;
+  max-width: 350px;
+  min-height: 330px;
 }
 
-#form_student{
+#form_student {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 50px;
@@ -116,18 +169,19 @@ button {
   padding: 40px 0px;
 }
 
-.submit-buttom{
+.submit-buttom {
   grid-column: span 2;
   text-align: center;
 }
 
-#span_cycle{
+#span_cycle {
   position: absolute;
   right: 10%;
   font-weight: bold;
+  top: 410px;
 }
 
-.submit-buttom button{
+.submit-buttom button {
   width: 150px;
   height: 30px;
   border-radius: 10px;
@@ -138,15 +192,15 @@ button {
 @keyframes slidein {
   0% {
     transform: translateX(100%) scale(3);
-    color: white; 
-    opacity: 0; 
+    color: white;
+    opacity: 0;
   }
-  50%{
+  50% {
     color: #f86666;
   }
   75% {
     transform: translateX(25%) scale(1.5);
-    opacity: 1; 
+    opacity: 1;
     color: #ff0000;
   }
 
@@ -164,15 +218,15 @@ button {
   }
 
   50% {
-    transform: translateX(25%);  
-    opacity: 1;  
-    clip-path: inset(0 25% 0 0);  
+    transform: translateX(25%);
+    opacity: 1;
+    clip-path: inset(0 25% 0 0);
     color: #ff8762;
   }
 
   100% {
     transform: translateX(0);
-    opacity: 1;  
+    opacity: 1;
     clip-path: inset(0 0 0 0);
   }
 }
@@ -182,7 +236,7 @@ button {
     opacity: 0;
     margin-right: -37px;
   }
-  
+
   to {
   }
 }
@@ -191,18 +245,67 @@ button {
   from {
     opacity: 0;
   }
-  
+
   to {
   }
 }
 
-
 /*Finish Editing Forms*/
 
-  @media screen and (max-width: 850px){
-    .header-wrapper{
-      margin-top: 50px;
+@media screen and (max-width: 850px) {
+  .main_content {
+    align-content: center;
+    justify-content: center;
+  }
+  .header_titles {
+    margin-top: 60px;
+  }
+
+  .header_titles h1 {
+    margin-top: 30px;
+  }
+  .header_titles img {
+    top: 15%;
+    right: 0%;
+  }
+
+  #span_mode {
+    right: 10px;
+  }
+  .toggle {
+    & + .switch {
+      right: 20px;
+      top: 60px;
     }
   }
-  
-  
+
+  /* Ajustar el contenedor del formulario a dos columnas */
+  #form_student {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    width: 500px;
+    margin: auto;
+    justify-items: center;
+    padding: 40px 0px;
+  }
+
+  .form-field {
+    width: 80%;
+    max-width: 100%;
+  }
+
+  .form-field input {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .submit-buttom {
+    grid-column: span 1;
+  }
+
+  #span_cycle {
+    position: static;
+    margin-top: 10px;
+  }
+}
