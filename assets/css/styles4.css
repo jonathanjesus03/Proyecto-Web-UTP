@@ -23,7 +23,7 @@ main {
   & + .switch {
     position: absolute;
     right: 50px;
-    top: 30px;
+    top: 25px;
     display: block;
     background: lightgray;
     width: 90px;

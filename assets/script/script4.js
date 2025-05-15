@@ -124,6 +124,7 @@ function DarkMode() {
     "#1d1d1d";
   document.getElementById("logo_utp").src = "/assets/img/utp.svg";
   document.getElementById("logo_utp").style.width = "175px";
+  document.getElementById("span_cycle").style.color = "white";
 
   // Cambiar texto a blanco
   const textos = document.querySelectorAll(
@@ -145,6 +146,7 @@ function WhiteMode() {
   document.getElementsByClassName("container_student")[0].style.background =
     "#fff";
   document.getElementById("logo_utp").src = "/assets/img/UTP_logo2.jpg";
+  document.getElementById("span_cycle").style.color = "black";
 
   // Restaurar colores de texto
   const textos = document.querySelectorAll(
