@@ -38,7 +38,7 @@ sudo apt update && sudo apt install nodejs npm -y
 ## 📥 Clonar el repositorio y acceder a la carpeta del proyecto:
 
 ```bash
-git clone https://github.com/TuUsuario/Taller-Web-UTP.git
+git clone https://github.com/TuUsuario/Proyecto-Web-UTP.git
 cd Taller-Web-UTP
 ```
 
